@@ -9,42 +9,39 @@
       <ul class="mui-table-view mui-grid-view mui-grid-9">
         <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
           <router-link to="/home/newslist">
-            <span class="mui-icon mui-icon-extra mui-icon-extra-lamp">
-              <span class="mui-badge">4</span>
-            </span>
+            <img src="../../images/menu1.png" >
             <div class="mui-media-body">新闻资讯</div>
           </router-link>
         </li>
         <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-          <a href="#">
-            <span class="mui-icon mui-icon-extra mui-icon-extra-share">
-            </span>
-            <div class="mui-media-body">分享喜爱</div>
-          </a>
+          <router-link to="/home/photolist">
+            <img src="../../images/menu2.png" >
+            <div class="mui-media-body">图片分享</div>
+          </router-link>
         </li>
         <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-          <a href="#">
-            <span class="mui-icon mui-icon-extra mui-icon-extra-gift"></span>
+          <router-link to="/home/newslist">
+            <img src="../../images/menu3.png" >
             <div class="mui-media-body">商品购买</div>
-          </a>
+          </router-link>
         </li>
         <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-          <a href="#">
-            <span class="mui-icon mui-icon-more-filled"></span>
+          <router-link to="/home/newslist">
+            <img src="../../images/menu4.png" >
             <div class="mui-media-body">留言反馈</div>
-          </a>
+          </router-link>
         </li>
         <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-          <a href="#">
-            <span class="mui-icon mui-icon-extra mui-icon-extra-classroom"></span>
+          <router-link to="/home/newslist">
+            <img src="../../images/menu5.png" >
             <div class="mui-media-body">视频专区</div>
-          </a>
+          </router-link>
         </li>
         <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-          <a href="#">
-            <span class="mui-icon mui-icon-phone"></span>
+          <router-link to="/home/newslist">
+            <img src="../../images/menu6.png" >
             <div class="mui-media-body">联系我们</div>
-          </a>
+          </router-link>
         </li>
       </ul>
     </div>
@@ -96,7 +93,8 @@ body{
   background-color: #fff;
   border: none;
 }
-.mui-table-view-cell.mui-media.mui-col-xs-4.mui-col-sm-3{
-  border: none;
+img{
+  height:60px;
+  width:60px; 
 }
 </style>
