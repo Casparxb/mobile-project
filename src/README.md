@@ -108,3 +108,12 @@ mui.js?80c5:3444 Uncaught TypeError: 'caller', 'callee', and 'arguments' propert
 2. 获取到所有的图片列表，然后使用v-for 指令渲染数据
 3. 注意img标签上的class不能去掉
 4. 注意，每个图片数据对象中，必须有w和h属性
+
+## 绘制 商品列表页面基本结构并美化
+
+## 尝试在手机上，去进行项目的预览和测试
+1. 保证自己的手机可以正常运行
+2. 保证手机和开发项目的电脑处于同一个wifi环境下，也就是说手机可以访问到电脑的ip
+3. 打开自己的项目中  package.json文件，在dev脚本中，添加一个--host指令
+把当前电脑的wifi ip地址，设置为--host的指令值
++ 如何查自己电脑所处的wifi ip呢，在cmd终端运行`ipconfig`，查看无线网的ip地址

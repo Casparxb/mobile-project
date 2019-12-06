@@ -1,7 +1,7 @@
 <template>
   <div cmt-container>
     <h3>发表评论</h3>
-    <hr />
+    <hr>
     <textarea placeholder="请输入要BB的内容(最多吐槽120字)" maxlength="120" v-model="msg"></textarea>
     <mt-button type="primary" size="large" @click="postComment">发表评论</mt-button>
 
@@ -9,7 +9,7 @@
       <div class="cmt-item" v-for="(item,index) in comments" :key="item.add_time">
         <div
           class="cmt-title"
-        >第{{index+1}}楼&nbsp;&nbsp;用户:{{item.name}}}&nbsp;&nbsp;发表时间:{{item.add_time | dataFormat}}</div>
+        >第{{index+1}}楼&nbsp;&nbsp;用户:{{item.name}}&nbsp;&nbsp;发表时间:{{item.add_time | dataFormat}}</div>
         <div class="cmt-body">{{item.content === 'undefind' ? '该用户很懒，什么都没说' : item.content}}</div>
       </div>
     </div>
@@ -25,7 +25,7 @@ export default {
   data() {
     return {
       pageIndex: 1,
-      comments: [],
+      comments:[],
       msg:''
     };
   },
