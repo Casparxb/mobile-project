@@ -1,6 +1,10 @@
 <template>
   <div id="app" class="app-container">
-    <mt-header fixed title="主页"></mt-header>
+    <mt-header fixed title="主页">
+      <span slot="left" v-show="flag" @click="goBack">
+        <mt-button icon="back">返回</mt-button>
+      </span>
+    </mt-header>
     <transition>
       <router-view></router-view>
     </transition>
@@ -15,7 +19,7 @@
       </router-link>
       <router-link class="mui-tab-item" to="/shopcar">
         <span class="mui-icon mui-icon-extra mui-icon-extra-cart">
-          <span class="mui-badge">0</span>
+          <span class="mui-badge">{{ $store.getters.getAllCount }}</span>
         </span>
         <span class="mui-tab-label" id="badge">购物车</span>
       </router-link>
@@ -29,13 +33,38 @@
 
 <script>
 export default {
-  name: "App",
-  components: {}
+  data() {
+    return {
+      flag: false
+    };
+  },
+  created() {
+    if (this.$route.path == "/home") {
+      this.flag = false;
+    } else {
+      this.flag = true;
+    }
+  },
+  methods: {
+    goBack() {
+      //点击后退
+      this.$router.go(-1);
+    }
+  },
+  watch: {
+    "$route.path": function(newVal) {
+      if (newVal === "/home") {
+        this.flag = false;
+      } else {
+        this.flag = true;
+      }
+    }
+  }
 };
 </script>
 
 <style scoped>
-.mint-header{
+.mint-header {
   z-index: 99;
 }
 .app-container {
@@ -43,18 +72,17 @@ export default {
   overflow-x: hidden;
   padding-bottom: 50px;
 }
-.v-enter{
+.v-enter {
   opacity: 0;
   transform: translateX(100%);
-  
 }
-.v-leave-to{
+.v-leave-to {
   opacity: 0;
   transform: translateX(-100%);
   position: absolute;
 }
 .v-enter-active,
-.v-leave-active{
+.v-leave-active {
   transition: all 0.5s ease;
 }
 </style>
